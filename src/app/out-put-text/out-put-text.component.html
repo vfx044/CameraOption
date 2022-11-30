@@ -1,0 +1,16 @@
+<div *ngIf="textOut" class="wrapper">
+    <!-- <p [innerHTML]="textOut"></p> -->
+    <!-- <textarea name="" id="" cols="30" rows="10" [innerHTML]="textOut"></textarea> -->
+<!--     <input type="text" [value]="textOut"> -->
+
+<form action="">
+  <h1>Datos Extraidos</h1>
+  <label for="staticEmail" class="col-sm-2 col-form-label">Last Name</label>
+  <input class="form-control" type="text"[value]="LastDetector()" aria-label="readonly input example" readonly>
+  <label for="staticEmail" class="col-sm-2 col-form-label">First Name</label>
+  <input class="form-control" type="text"[value]="NameDetector()" aria-label="readonly input example" readonly>
+  <label for="staticEmail" class="col-sm-2 col-form-label">Date</label>
+  <input class="form-control" type="text"[value]="DateDetector()" aria-label="readonly input example" readonly>
+
+</form>
+  </div>

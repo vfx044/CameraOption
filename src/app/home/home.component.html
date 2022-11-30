@@ -1,0 +1,64 @@
+
+    
+    <div class="wrapper">
+
+        <h1 class="selection">
+            Selecciona una opcion
+        </h1>
+                <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Recomendaciones
+     </button>
+     
+     <!-- Modal -->
+     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+       <div class="modal-dialog">
+         <div class="modal-content">
+           <div class="modal-header">
+             <h5 class="modal-title" id="exampleModalLabel">Uso</h5>
+             
+           </div>
+           <div class="modal-body">
+            Recuerda estar en una sala iluminada y tomar la fotografia abarcando el documento para mayores resultados
+           </div>
+           <div class="modal-footer">
+             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+           
+           </div>
+         </div>
+       </div>
+     </div> 
+        <div class="add" >
+            
+            
+            <!--   <p-fileUpload name="myfile[]" [customUpload]="true" (uploadHandler)="handleInputChange($event)"></p-fileUpload> -->
+            <label for="fichero" (click)="clicklabel()"><svg xmlns="http://www.w3.org/2000/svg" class="iborrainputfile" width="20" height="17" viewBox="0 0 20 17"><path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"></path></svg></label>
+            <input name="imageUrl" type="file" accept="image/*" (change)="handleInputChange($event)" class="inputimage" id="fichero" />
+            <button (click)="Camera()"><img src="../../assets/img/camara.png" alt="" class="icon"></button>
+            
+          </div>
+        <div class="camera" *ngIf="camerabol == true"> <app-camera-component (sendimg)="image($event)"></app-camera-component></div>
+        <ul class="list-file">
+            <li class="item-file"  *ngIf="imageSrc"  >
+                
+                <div class="block" >
+                    <!-- <img [src]="imageSrc"alt="" class="input-image"> -->
+                    <h1>Imagen Subida</h1>
+                   <!--  <img [src]="imageSrc" #InputImagen  (click)="clickImage()" > -->
+                   <img [src]="imageSrc" class="img-fluid" (click)="clickImage()">
+                    <div class="text">
+                        <p>Presiona la imagen para que pueda ser escaneada</p>
+                    </div>
+                    
+                  
+                </div>
+       
+            </li>
+            
+        </ul>
+        
+       
+    </div>
+    <app-sidebar [inputsImages]="send" *ngIf="send" ></app-sidebar>
+    <app-out-put-text></app-out-put-text>
+

@@ -1,0 +1,16 @@
+.wrapper{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 10px;
+    box-shadow: -3px 4px 21px 0px rgba(0,0,0,0.75);
+}
+    p{
+      white-space: pre-wrap;
+      padding: 1rem;
+    }
+
+    h1{
+      text-align: center;
+    }
+  

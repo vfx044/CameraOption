@@ -1,0 +1,42 @@
+<div class="container-Principal">
+   
+  
+    <div class="camera">
+        <!-- Part of code for show camera    -->
+      <webcam [height]="500" [width]="width"  [trigger]="triggerObservable" (imageCapture)="handleImage($event)" *ngIf="showWebcam"
+             
+              [switchCamera]="nextWebcamObservable"
+             
+              [imageQuality]="1"
+              (cameraSwitched)="cameraSwitched($event)"
+              (initError)="handleInitError($event)"
+              class="web"
+      ></webcam>
+      <br/>
+    
+      <button  class="btn btn-primary m-5" (click)="triggerCapture();"><img src="../../assets/img/modo-retrato.png" alt="" class="take"></button>
+      <!-- <button  class="btn btn-primary m-5" (click)="toggleWebcam();"><img src="../../assets/img/gira-a-la-derecha.png" alt="" class="change"></button> -->
+    
+      <br/>
+      <!-- <button  class="btn btn-primary m-5" (click)=" showNextWebcam(true);" [disabled]="!DiferentsCameras ">Next Webcam</button>
+      <input id="cameraSwitchCheckbox" type="checkbox" [(ngModel)]="changeWebcam "><label for="cameraSwitchCheckbox">Allow Camera Switch</label>
+      <br/> -->
+      <!-- idCameras: <input id="idCameras" type="text" [(ngModel)]="idCameras" style="width: 500px">
+      <button (click)="showNextWebcam(idCameras);"  class="btn btn-primary m-5">Activate</button> -->
+    </div>
+  </div>
+<!--   
+  <div class="snapshot" *ngIf="imgWebcam">
+ 
+    <img [src]="imgWebcam.imageAsDataUrl" class="muestra-img"/>
+  </div>
+  <div>
+
+  </div> -->
+  
+  <h4 *ngIf="errors.length > 0">Messages:</h4>
+  <ul *ngFor="let error of errors">
+    <li>{{error | json}}</li>
+  </ul>
+  
+  

@@ -1,0 +1,18 @@
+<div class="wrapper" >
+   
+    <div class="wrapper-sections">
+    <div class="in-wrapper">
+        <!-- IMG -->
+        <ng-container>
+            <h1>
+                Imagen a Escaneada
+            </h1>
+            <canvas #OutputImagen class="canvas-overlay"></canvas>
+          <!--   <img (load)="loadedimage()" class="input-image" #InputImagen [src]="inputsImages" alt=""> -->
+         <div class="cont-img"> <img  #InputImagen [src]="inputsImages" (load)="loadedimage()" class="img-fluid" alt="..."></div>
+        </ng-container>
+    </div>
+
+    </div>
+</div>
+

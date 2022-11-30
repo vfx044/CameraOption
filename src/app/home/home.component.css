@@ -1,0 +1,104 @@
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+   align-content: center;
+    
+}
+h1{
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+   
+}
+.list-file{
+    list-style: none;
+ 
+    padding: 0px;
+    display: contents;
+    background: none;
+    margin-top: 10px;
+}
+li.item-file {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.block{
+    cursor: pointer;
+    
+    margin-top: 20px;
+    width: 500px;
+    height: 20rem;
+   
+border-radius: .5rem ;
+background: #20537E;
+
+}
+
+
+.add{
+    display: flex;
+    height: 100px;
+   
+    
+}
+
+
+
+.inputimage{
+    display: none;
+
+}
+label{
+    margin-left: 20px;
+    margin-right: 20px;
+/*    background-color: #A9DE75; */
+background: none;
+   border-radius: 10px;
+   width: 60%;
+   height: 40%;
+       background-color: white;
+
+   padding-top: 5px;
+   margin-top: 20px;
+   box-shadow: -1px 0px 12px -3px rgba(0,0,0,1);
+   text-align: center;
+}
+button{
+    margin-left: 20%;
+    margin-right: 20px;
+  /*  background-color: #A9DE75; */
+  background: none;
+   border-radius: 10px;
+   width: 60%;
+   height: 40%;
+   font-size: 17px;
+   
+    background-color: white;
+   border: 1px dashed white;
+   margin-top: 20px;
+    color: black;
+   font-weight: bold;
+   box-shadow: -1px 0px 12px -3px rgba(0,0,0,1);
+}
+
+.icon{
+    width: 20px;
+    height: 20px;
+}
+p{
+    text-align: center;
+    color: white;
+}
+
+.modal{
+    background-color: rgb(0, 0, 0,0.5);
+}
+.modal-dialog{
+    margin-top: 60%;
+}
+.Modal-body{
+    color: white;
+}
